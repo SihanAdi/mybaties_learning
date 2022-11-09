@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybaties_09" />
+        <module name="mybaties_08" />
+        <module name="mybaties_06" />
+        <module name="mybaties_05" />
+        <module name="mybaties_03" />
+        <module name="mybaties_02" />
+        <module name="mybaties_01" />
+        <module name="mybaties_10" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybaties_07" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

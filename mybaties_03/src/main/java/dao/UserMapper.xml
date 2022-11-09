@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--        解决属性名与字段名不一致，也就是pojo类与数据库列名不一样-->
+<mapper namespace="dao.UserMapper">
+
+<!--    结果集映射-->
+    <resultMap id="UserMap" type="User">
+<!--        <result column="id" property="id"/>-->
+<!--        <result column="name" property="name"/>-->
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <select id="getUserById" parameterType="int" resultMap="UserMap">
+        select * from mybaties.user where id = #{id}
+    </select>
+    <select id="getUserByLimit" parameterType="map" resultMap="UserMap">
+        select * from mybaties.user limit #{startId}, #{pageSize}
+    </select>
+<!--    <select id="getUserById" parameterType="int" resultType="User">-->
+<!--&lt;!&ndash;        select id, name, pwd as password from mybaties.user where id = #{id}&ndash;&gt;-->
+<!--        select * from mybaties.user where id = #{id}-->
+<!--    </select>-->
+
+
+</mapper>
